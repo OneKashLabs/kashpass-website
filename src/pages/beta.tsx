@@ -3,7 +3,7 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
-const GROUP = 'https://groups.google.com/g/kashpass';
+const GROUP = 'https://groups.google.com/g/onekash-labs';
 const OPT_IN = 'https://play.google.com/apps/testing/org.onekash.kashpass';
 const PLAY = 'https://play.google.com/store/apps/details?id=org.onekash.kashpass';
 
@@ -22,7 +22,7 @@ export default function Beta(): ReactNode {
             <li>
               <Heading as="h3">Join the group</Heading>
               <p>
-                Open <Link href={GROUP}>groups.google.com/g/kashpass</Link> and tap Join group.
+                Open <Link href={GROUP}>groups.google.com/g/onekash-labs</Link> and tap Join group.
               </p>
             </li>
             <li>
