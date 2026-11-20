@@ -15,11 +15,11 @@ const SHOTS: Shot[] = [
     img: '/img/app/search.webp',
     alt: 'Search results for "bank", with the match highlighted in each entry',
     title: 'Find a login',
-    caption: 'Search titles, user names, URLs, notes, tags and custom fields.',
+    caption: 'Search titles, user names, URLs, notes, tags, and custom fields.',
   },
   {
     img: '/img/app/entry_sheet.webp',
-    alt: 'An entry with copy buttons beside user name, password and URL',
+    alt: 'An entry with copy buttons beside user name, password, and URL',
     title: 'Copy a field',
     caption: 'The clipboard clears after 30 seconds.',
   },
@@ -129,7 +129,7 @@ function Shots(): ReactNode {
     <section className="kp-section kp-section--mist">
       <div className="container">
         <Heading as="h2" className="kp-heading">
-          Search, copy and edit.
+          Search, copy, and edit.
         </Heading>
         <div className="kp-shots">
           {SHOTS.map((s) => (
