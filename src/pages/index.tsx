@@ -34,12 +34,12 @@ const SHOTS: Shot[] = [
 type Tile = {title: string; body: string};
 
 const TILES: Tile[] = [
-  {title: 'Fingerprint or face unlock', body: 'Turn it on after you unlock with your password.'},
-  {title: 'Key files', body: 'Use a key file with your password, or on its own.'},
-  {title: 'Encrypted backups', body: 'A copy on the phone at every open and save.'},
-  {title: 'Checked saves', body: 'KashPass reads each save back and decrypts it.'},
+  {title: 'Unlock with a fingerprint or face', body: 'Turn it on after you unlock with your password.'},
+  {title: 'Use a key file', body: 'With your password, or on its own.'},
+  {title: 'A backup at every open and save', body: 'An encrypted copy stays on the phone.'},
+  {title: 'Every save checked', body: 'KashPass reads each save back and decrypts it.'},
   {title: 'Locks when you leave', body: 'When the screen turns off, or 1 minute after you switch apps.'},
-  {title: 'Screenshots blocked', body: 'No screen recording. No overlays from other apps.'},
+  {title: 'No screenshots of your passwords', body: 'No screen recording. No overlays from other apps.'},
 ];
 
 function Hero(): ReactNode {
@@ -48,12 +48,12 @@ function Hero(): ReactNode {
       <div className="container kp-hero__inner">
         <div>
           <Heading as="h1" className="kp-hero__title">
-            KeePass companion
+            Your KeePass vault,
             <br />
-            for Android.
+            on your phone.
           </Heading>
           <p className="kp-hero__lead">
-            Open and edit your KeePass vault on your phone.
+            Find a login, copy a password, and edit entries in the file KeePass 2 opens.
           </p>
           <div className="kp-hero__cta">
             <Link className="kp-btn kp-btn--gold" to="/beta/">
@@ -88,8 +88,8 @@ function Privacy(): ReactNode {
   return (
     <section className="kp-privacy">
       <div className="container">
-        <Heading as="h2">No internet permission.</Heading>
-        <p>KashPass can’t reach the internet. It collects nothing.</p>
+        <Heading as="h2">KashPass can’t send your passwords anywhere.</Heading>
+        <p>It has no internet permission and collects nothing.</p>
         <Link href={PRIVACY}>Privacy policy</Link>
       </div>
     </section>
@@ -109,7 +109,7 @@ function HowItWorks(): ReactNode {
     <section className="kp-section">
       <div className="container">
         <Heading as="h2" className="kp-heading">
-          How it works with KeePass 2
+          One vault, on your computer and your phone.
         </Heading>
         <ol className="kp-flow">
           {STEPS.map((s) => (
@@ -129,7 +129,7 @@ function Shots(): ReactNode {
     <section className="kp-section kp-section--mist">
       <div className="container">
         <Heading as="h2" className="kp-heading">
-          Search, copy, and edit.
+          The login you need, in seconds.
         </Heading>
         <div className="kp-shots">
           {SHOTS.map((s) => (
@@ -152,7 +152,7 @@ function Tiles(): ReactNode {
     <section className="kp-section">
       <div className="container">
         <Heading as="h2" className="kp-heading">
-          Also in KashPass
+          The little things.
         </Heading>
         <div className="kp-tiles">
           {TILES.map((t) => (
