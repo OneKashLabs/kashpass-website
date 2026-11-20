@@ -61,5 +61,5 @@ GNU Affero General Public License v3.0 or later. The KashPass name and icon are 
 
 - KashCal (https://kashcal.onekash.org): all your calendars in one private Android app.
 - KashCake (https://kashcake.onekash.org): birthday and anniversary reminders from your contacts on Android.
-- iCloud Calendar MCP (https://mcp.onekash.org): your iCloud Calendar for AI agents.
+- iCloud Calendar MCP (https://mcp.onekash.org): connect AI to your iCloud Calendar.
 - OneKash Labs (https://onekash.org): the lab behind these apps.
