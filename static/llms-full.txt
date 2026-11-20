@@ -1,0 +1,65 @@
+# KashPass
+
+> KashPass is a free, open-source Android companion for KeePass vaults. It opens the same KDBX 4 file you manage in KeePass 2 on your computer: find a login, copy a password, edit an entry, and save back to the same file. It has no internet permission, no accounts, and no ads, and collects nothing. Made by OneKash Labs (https://onekash.org). Not affiliated with KeePass.
+
+Website: https://kashpass.onekash.org
+Source: https://github.com/OneKashLabs/KashPass
+Get it: the Google Play beta (https://kashpass.onekash.org/beta/) or GitHub Releases (https://github.com/OneKashLabs/KashPass/releases).
+
+## Your vault, on your phone
+
+You keep your vault in a storage app, such as a cloud drive, and manage it in KeePass 2 on your computer. KashPass opens the same file on your phone and saves back to it. KeePass 2 opens the saved file. KashPass reads and writes only the file you pick.
+
+## What it does
+
+- Opens KDBX 4.0 and 4.1 vaults with a password, a key file, or both. Encryption: AES-256 or ChaCha20, with AES-KDF, Argon2d, or Argon2id key derivation.
+- Opens the vault through Android's file picker, or from a file manager with Open with.
+- Lists entries A to Z with group filters. Search covers titles, user names, URLs, notes, tags, and custom fields. Passwords and protected fields are never searched.
+- Shows every field, with reveal and copy. A copied value is marked sensitive and cleared after 30 seconds.
+- Adds, edits, and deletes entries the way KeePass 2 does: each change keeps the old version in the entry's history, and deleted entries go to the recycle bin when the vault has one.
+- Unlocks with a fingerprint or face once you turn it on (Class 3 biometrics only).
+- Locks when the screen turns off, one minute after you leave the app, or when you lock it.
+
+## Safe saving
+
+- Before each save, KashPass checks that the file hasn't changed since you opened it. After writing, it reads the file back and decrypts it. If either check fails, it tells you and keeps your edits.
+- Each open and save keeps an encrypted copy of the vault in app-private storage. If the file can't be read, KashPass opens the newest copy read-only, and you can save it as a new file.
+- With KeePass 2 and a cloud drive: save on one device and let the storage app finish syncing before you edit on the other. If a newer version has already reached the phone, KashPass doesn't save and offers to save your edits as a copy (then merge it in KeePass 2 with File, Synchronize), reload, or keep editing.
+
+## Private and locked down
+
+- No internet permission. Two permissions in all: biometric, and hiding other apps' overlays.
+- Key-derivation settings are checked before any key work. KashPass refuses unsafe values, and refuses a file whose settings got weaker since you last opened it.
+- Decrypted entries, passwords, and key files are never written to disk or to logs.
+- Screenshots, screen recording, and other apps' overlays are blocked. Autofill is off in the app.
+- No analytics or tracking.
+
+## How it's tested
+
+- KeePass 2's own library opens every vault KashPass saves in the tests, after each kind of edit.
+- Key derivation is checked against the RFC 9106 test vectors and 820 cases from the Argon2 reference implementation.
+- The vault reader and writer are fuzzed and property-tested with random vaults and edit sequences.
+
+## What it doesn't do
+
+No autofill, sync servers, creating vaults, KDBX 3, opening attachments, or TOTP codes. Attachments and everything else you don't edit are kept when you save.
+
+## Requirements
+
+- Android 12 or later.
+- A KDBX 4 vault. KeePass 2.57 and later always save KDBX 4.
+
+## Verify your download
+
+Each release lists the APK's SHA-256. The signing certificate SHA-256 is D4:B7:D3:9C:9F:AD:18:9B:C4:17:C6:44:11:00:5E:BD:5F:78:1A:F2:3D:74:62:C1:C0:99:1C:5E:DD:04:4F:E0. Release APKs are reproducible.
+
+## License
+
+GNU Affero General Public License v3.0 or later. The KashPass name and icon are trademarks of OneKash Labs.
+
+## Other OneKash Labs apps
+
+- KashCal (https://kashcal.onekash.org): all your calendars in one private Android app.
+- KashCake (https://kashcake.onekash.org): birthday and anniversary reminders from your contacts on Android.
+- iCloud Calendar MCP (https://mcp.onekash.org): your iCloud Calendar for AI agents.
+- OneKash Labs (https://onekash.org): the lab behind these apps.

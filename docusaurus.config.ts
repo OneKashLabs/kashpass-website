@@ -1,6 +1,9 @@
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// The one organization every OneKash Labs site points to, defined on onekash.org.
+const ORG = {'@type': 'Organization', '@id': 'https://onekash.org/#org', name: 'OneKash Labs', url: 'https://onekash.org'};
+
 const config: Config = {
   title: 'KashPass',
   tagline: 'Companion for your KeePass vaults with secure access and no internet',
@@ -40,7 +43,19 @@ const config: Config = {
         ],
         offers: {'@type': 'Offer', price: '0', priceCurrency: 'USD'},
         sameAs: ['https://github.com/OneKashLabs/KashPass'],
-        author: {'@type': 'Organization', name: 'OneKash Labs', url: 'https://onekash.org'},
+        author: ORG,
+        publisher: ORG,
+      }),
+    },
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'KashPass',
+        url: 'https://kashpass.onekash.org/',
+        publisher: ORG,
       }),
     },
   ],
