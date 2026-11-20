@@ -152,7 +152,7 @@ function Tiles(): ReactNode {
     <section className="kp-section">
       <div className="container">
         <Heading as="h2" className="kp-heading">
-          The little things.
+          Locked down by default.
         </Heading>
         <div className="kp-tiles">
           {TILES.map((t) => (
