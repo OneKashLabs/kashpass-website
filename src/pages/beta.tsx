@@ -9,7 +9,7 @@ const PLAY = 'https://play.google.com/store/apps/details?id=org.onekash.kashpass
 
 export default function Beta(): ReactNode {
   return (
-    <Layout title="Join the beta" description="Get KashPass from Google Play before it goes public.">
+    <Layout title="Join the beta" description="Get KashPass from Google Play before it goes public: join the tester group, opt in, and install. Testers stay opted in for 14 days.">
       <header className="kp-pagehead">
         <div className="container">
           <Heading as="h1">Join the beta</Heading>
